@@ -1,5 +1,10 @@
 package com.pokedex.Model;
 
+import com.pokedex.Repository.PokemonRepository;
+
+import java.lang.reflect.Array;
+import java.util.*;
+
 public class Pokemon {
     private String nome;
     private String tipo;
@@ -24,4 +29,7 @@ public class Pokemon {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+
+
 }

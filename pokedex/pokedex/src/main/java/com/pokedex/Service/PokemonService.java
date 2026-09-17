@@ -5,6 +5,8 @@ import com.pokedex.Model.Pokemon;
 import com.pokedex.Repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PokemonService {
 
@@ -23,10 +25,18 @@ public class PokemonService {
         return "Bye " +pokemonRepository.mostrarNome() + "\n" + "Tipo: " + pokemonRepository.mostrarTipo();
     }
 
-    public Pokemon mostrarPokemon(){
+    public List<Pokemon> mostrarPokemon(){
        return pokemonRepository.pegarPokemon();
 
     }
+
+    public void addPokemon(Pokemon pokemon){
+        pokemonRepository.addPokemon(pokemon);
+
+
+    }
+
+
 
 
 
