@@ -8,44 +8,21 @@ import java.util.*;
 @Repository
 public class PokemonRepository {
 
-    private String nome;
-    private String tipo;
+
 
     private List<Pokemon> listaPokemon;
 
-    public PokemonRepository(String nome, List<Pokemon> listaPokemon, String tipo) {
-        this.nome = nome;
+    public PokemonRepository(List<Pokemon> listaPokemon) {
         this.listaPokemon = listaPokemon;
-        this.tipo = tipo;
     }
 
-    public PokemonRepository() {
-        this.nome = "kauan";
-        this.tipo = "Casado";
+    public String addPokemon(Pokemon pokemon){
+        this.listaPokemon.add(pokemon);
+
+        return "Deu certo!";
     }
 
-    public String mostrarNome(){
-        return nome;
+    public List<Pokemon> getListaPokemon() {
+        return listaPokemon;
     }
-
-    public String mostrarTipo(){
-        return tipo;
-    }
-
-    public List<Pokemon> pegarPokemon(){
-        Pokemon pikachu = new Pokemon("Pikachu","Eletrico");
-
-        return this.pokemonList;
-    }
-
-    List<Pokemon> pokemonList = new ArrayList<>();
-
-    public void addPokemon(Pokemon pokemon){
-        pokemonList.add(pokemon);
-    }
-
-
-
-
-
 }

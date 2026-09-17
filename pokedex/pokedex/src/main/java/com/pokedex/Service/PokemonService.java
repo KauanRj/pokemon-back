@@ -16,25 +16,19 @@ public class PokemonService {
         this.pokemonRepository = pokemonRepository;
     }
 
-    public String HelloWorld(String nome, String tipo){
-        return "Hello " + pokemonRepository.mostrarNome()  + "\n" + "Tipo: " + pokemonRepository.mostrarTipo();
-    }
 
 
-    public String ByeWorld(String nome, String tipo){
-        return "Bye " +pokemonRepository.mostrarNome() + "\n" + "Tipo: " + pokemonRepository.mostrarTipo();
-    }
-
-    public List<Pokemon> mostrarPokemon(){
-       return pokemonRepository.pegarPokemon();
-
-    }
-
-    public void addPokemon(Pokemon pokemon){
-        pokemonRepository.addPokemon(pokemon);
+    public String addPokemon(Pokemon pokemon){
+        return pokemonRepository.addPokemon(pokemon);
 
 
     }
+
+    public List<Pokemon> getlista(){
+        return pokemonRepository.getListaPokemon();
+    }
+
+
 
 
 

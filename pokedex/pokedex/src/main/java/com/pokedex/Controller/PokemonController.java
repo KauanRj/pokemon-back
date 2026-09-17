@@ -18,36 +18,19 @@ public class PokemonController {
         this.pokemonService = pokemonService;
     }
 
-    @GetMapping("/oi/{nome}")
-    public String HelloWorld(@PathVariable String nome, String tipo){
-
-        String saudacao = pokemonService.HelloWorld(nome, tipo);
-
-        return saudacao;
-    }
-
-    @GetMapping("/tchau/{nome}")
-    public String ByeWorld(@PathVariable String nome, String tipo){
-        String tchauzao = pokemonService.ByeWorld(nome, tipo);
 
 
-        return tchauzao;
+
+    @PostMapping ("/add")
+    public String  addPokemon( @RequestBody Pokemon pokemon){
+
+        return pokemonService.addPokemon(pokemon);
 
     }
 
-    @GetMapping("")
-    public List<Pokemon> mostar(){
-
-        List<Pokemon> picachu = pokemonService.mostrarPokemon();
-
-        return picachu;
-    }
-
-    @PostMapping ("")
-    public void  addPokemon( @RequestBody Pokemon pokemon){
-
-        pokemonService.addPokemon(pokemon);
-
+    @GetMapping("/lista")
+    public List<Pokemon> getLista(){
+        return pokemonService.getlista();
     }
 
 
