@@ -16,11 +16,8 @@ public class PokemonService {
         this.pokemonRepository = pokemonRepository;
     }
 
-
-
     public String addPokemon(Pokemon pokemon){
         return pokemonRepository.addPokemon(pokemon);
-
 
     }
 
@@ -28,11 +25,13 @@ public class PokemonService {
         return pokemonRepository.getListaPokemon();
     }
 
+    public String updatePokemon(String nome, Pokemon pokemon){
+        return pokemonRepository.updatePokemon(nome , pokemon);
+    }
 
-
-
-
-
+    public String deletePokemon(String nome){
+        return pokemonRepository.deletePokemon(nome);
+    }
 
   }
 
